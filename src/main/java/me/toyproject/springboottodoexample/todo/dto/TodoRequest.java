@@ -1,12 +1,14 @@
 package me.toyproject.springboottodoexample.todo.dto;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
-public class NewTodo {
+@NoArgsConstructor
+public class TodoRequest {
     private String task;
 
-    public NewTodo(String task) {
+    public TodoRequest(String task) {
         this.task = task;
     }
 }

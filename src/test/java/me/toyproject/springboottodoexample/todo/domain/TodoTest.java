@@ -1,4 +1,5 @@
-package me.toyproject.springboottodoexample.todo;
+package me.toyproject.springboottodoexample.todo.domain;
+
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -18,6 +19,7 @@ public class TodoTest {
     @Test
     @DisplayName("Todo의 기본값")
     public void todoTest() {
+        assertThat(todo.getTask()).isEqualTo("test");
         assertThat(todo.isDone()).isFalse();
     }
 

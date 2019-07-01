@@ -1,7 +1,7 @@
-package me.toyproject.springboottodoexample.todo;
+package me.toyproject.springboottodoexample.todo.dao;
 
+import me.toyproject.springboottodoexample.todo.domain.Todo;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 public interface TodoRepository extends JpaRepository<Todo, Long> {
 }

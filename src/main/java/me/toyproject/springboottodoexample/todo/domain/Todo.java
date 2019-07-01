@@ -1,4 +1,4 @@
-package me.toyproject.springboottodoexample.todo;
+package me.toyproject.springboottodoexample.todo.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -44,6 +44,10 @@ public class Todo {
     public Todo done() {
         this.isDone = true;
         return this;
+    }
+
+    public String getTask() {
+        return task;
     }
 
     @Override
