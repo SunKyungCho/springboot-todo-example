@@ -2,6 +2,7 @@ package me.toyproject.springboottodoexample.todo.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import me.toyproject.springboottodoexample.Accounts.domain.Account;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -32,6 +33,9 @@ public class Todo {
     @UpdateTimestamp
     @Column(name = "update_at")
     private LocalDateTime updateAt;
+
+    @ManyToOne
+    private Account manager;
 
     public Todo(String task) {
         this.task = task;

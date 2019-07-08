@@ -27,6 +27,6 @@ class TodoServiceTest {
         Todo addedTodo = todoService.createNewTodo(todoRequest);
 
         // Then
-        assertThat(todoRequest.getTask()).isEqualTo(addedTodo);
+        assertThat(todoRequest.getTask()).isEqualTo(addedTodo.getTask());
     }
 }

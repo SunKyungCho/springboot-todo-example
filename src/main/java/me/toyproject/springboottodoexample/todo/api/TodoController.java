@@ -16,9 +16,10 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TodoController {
 
-    private TodoService service;
+    private final TodoService service;
 
     @GetMapping("")
     public String test() {
