@@ -1,15 +1,12 @@
-package me.toyproject.springboottodoexample.Accounts.domain;
+package me.toyproject.springboottodoexample.domain.account;
 
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
-
 
 @Entity
 @Getter
@@ -31,12 +28,12 @@ public class Account {
     @ElementCollection(fetch = FetchType.EAGER)
     @Enumerated(EnumType.STRING)
     private Set<AccountRole> roles;
-//    @CreationTimestamp
-//    @Column(name = "create_at", nullable = false, updatable = false)
-//    private LocalDateTime createAt;
-//    @UpdateTimestamp
-//    @Column(name = "update_at", nullable = false)
-//    private LocalDateTime updateAt;
+    @CreationTimestamp
+    @Column(name = "create_at", nullable = false, updatable = false)
+    private LocalDateTime createAt;
+    @UpdateTimestamp
+    @Column(name = "update_at", nullable = false)
+    private LocalDateTime updateAt;
 
     public Account(String name, String password, Set<AccountRole> roles) {
         this.name = name;
