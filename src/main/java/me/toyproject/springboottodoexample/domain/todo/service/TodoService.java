@@ -1,8 +1,8 @@
-package me.toyproject.springboottodoexample.todo.service;
+package me.toyproject.springboottodoexample.domain.todo.service;
 
-import me.toyproject.springboottodoexample.todo.dao.TodoRepository;
-import me.toyproject.springboottodoexample.todo.domain.Todo;
-import me.toyproject.springboottodoexample.todo.dto.TodoRequest;
+import me.toyproject.springboottodoexample.domain.todo.dao.TodoRepository;
+import me.toyproject.springboottodoexample.domain.todo.domain.Todo;
+import me.toyproject.springboottodoexample.domain.todo.dto.TodoRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

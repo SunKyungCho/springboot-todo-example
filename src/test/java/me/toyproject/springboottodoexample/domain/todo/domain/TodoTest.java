@@ -1,4 +1,4 @@
-package me.toyproject.springboottodoexample.todo.domain;
+package me.toyproject.springboottodoexample.domain.todo.domain;
 
 
 import org.junit.jupiter.api.BeforeEach;

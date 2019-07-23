@@ -1,10 +1,10 @@
-package me.toyproject.springboottodoexample.todo.dto;
+package me.toyproject.springboottodoexample.domain.todo.dto;
 
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import me.toyproject.springboottodoexample.todo.domain.Todo;
+import me.toyproject.springboottodoexample.domain.todo.domain.Todo;
 
 @Getter
 @Setter

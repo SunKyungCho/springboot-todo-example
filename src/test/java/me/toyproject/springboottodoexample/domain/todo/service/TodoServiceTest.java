@@ -1,7 +1,7 @@
-package me.toyproject.springboottodoexample.todo.service;
+package me.toyproject.springboottodoexample.domain.todo.service;
 
-import me.toyproject.springboottodoexample.todo.domain.Todo;
-import me.toyproject.springboottodoexample.todo.dto.TodoRequest;
+import me.toyproject.springboottodoexample.domain.todo.domain.Todo;
+import me.toyproject.springboottodoexample.domain.todo.dto.TodoRequest;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

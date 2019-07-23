@@ -1,11 +1,10 @@
-package me.toyproject.springboottodoexample.todo.domain;
+package me.toyproject.springboottodoexample.domain.todo.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import me.toyproject.springboottodoexample.Accounts.domain.Account;
+import me.toyproject.springboottodoexample.domain.account.Account;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
