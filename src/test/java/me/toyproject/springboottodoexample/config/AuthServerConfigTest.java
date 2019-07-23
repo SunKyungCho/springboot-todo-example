@@ -1,14 +1,12 @@
 package me.toyproject.springboottodoexample.config;
 
-import me.toyproject.springboottodoexample.Accounts.domain.Account;
-import me.toyproject.springboottodoexample.Accounts.domain.AccountRepository;
-import me.toyproject.springboottodoexample.Accounts.domain.AccountRole;
-import me.toyproject.springboottodoexample.Accounts.domain.AccountService;
+import me.toyproject.springboottodoexample.domain.account.Account;
+import me.toyproject.springboottodoexample.domain.account.AccountRole;
+import me.toyproject.springboottodoexample.domain.account.AccountService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -50,7 +48,7 @@ public class AuthServerConfigTest {
                 .roles((Set.of(AccountRole.USER, AccountRole.ADMIN)))
                 .build();
 
-        accountService.saveAccount(account);
+//        accountService.saveAccount(account);
 
         this.mockMvc.perform(post("/oauth/token")
                 .with(httpBasic(clientId, clientSecret))
@@ -62,5 +60,4 @@ public class AuthServerConfigTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("access_token").exists());
     }
-
 }

@@ -1,4 +1,4 @@
-package me.toyproject.springboottodoexample.Accounts.domain;
+package me.toyproject.springboottodoexample.domain.account;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

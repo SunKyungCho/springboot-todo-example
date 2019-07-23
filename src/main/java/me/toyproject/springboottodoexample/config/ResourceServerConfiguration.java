@@ -25,7 +25,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
                 .and()
                 .authorizeRequests()
 
-                .mvcMatchers(HttpMethod.GET, "/")
+                .mvcMatchers(HttpMethod.POST, "/login")
                 .anonymous()
 
                 .anyRequest()

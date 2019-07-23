@@ -1,7 +1,6 @@
-package me.toyproject.springboottodoexample.Accounts.domain;
+package me.toyproject.springboottodoexample.domain.account;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -15,10 +14,10 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class AccountService implements UserDetailsService {
 
-    @Autowired
-    private AccountRepository accountRepository;
+    private final AccountRepository accountRepository;
 
     public Account saveAccount(Account account) {
         return accountRepository.save(account);
